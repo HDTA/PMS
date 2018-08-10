@@ -27,11 +27,17 @@ function listener() {
 
    });
 
-   $('.logo').find('button').eq(0).click(function () {
-       location.href = "/login/login.do";
+   $('#first').click(function () {
+       var $form = $('<form action="/login/login.do" method="post"></form>');
+       var $body = $('body');
+       $form.appendTo($body);
+       $form.submit();
+       $body.remove($form);
+
+       // location.href = "/login/login.do";
    });
 
-    $('.logo').find('button').eq(1).click(function () {
+    $('#logout').click(function () {
         location.href = "/login/index.do";
     });
 

@@ -20,8 +20,8 @@
 <body class="body">
 <div class="logo " >
     <img src="../../img/logo3.png">
-    <button class="shadow">首页</button>
-    <button class="shadow">退出</button>
+    <button class="shadow" id="first">首页</button>
+    <button class="shadow" id="logout">退出</button>
 </div>
 
     <div class="able">

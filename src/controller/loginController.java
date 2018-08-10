@@ -15,7 +15,7 @@ public class loginController {
 
     @RequestMapping(value = "/index.do",method = RequestMethod.GET)
     public String index(){
-        return "redirect:index.jsp";
+        return "index";
     }
 
 
