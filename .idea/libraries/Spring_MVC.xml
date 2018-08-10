@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Spring MVC" type="spring-mvc">
+    <CLASSES>
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-aop-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-aspects-4.2.8.RELEASE-sources.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-beans-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-context-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-context-support-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-core-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-expression-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-jdbc-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-orm-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-tx-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-web-4.2.8.RELEASE.jar!/" />
+      <root url="jar://D:/eclipse2/apache-tomcat-9.0.4/lib/spring-webmvc-4.2.8.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
