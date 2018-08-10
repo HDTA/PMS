@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.body{
+    /*background-image: url('../img/bg2.jpg');*/
+    background-color: #2b2b2b;
+
+}
+
+.able{
+    width: 550px;
+    height: 380px;
+    margin: 0 auto  ;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    top:20px;
+    text-align: center;
+
+
+}
+
+.able div{
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+    text-align: center;
+}
+
+
+.able div:hover{
+    cursor: pointer;
+}
+
+.logo{
+    width: 220px;
+    height: 140px;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.logo img{
+    margin: 20px;
+}

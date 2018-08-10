@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+.body{
+    background-image: url('../img/bg.jpg');
+}
+
+.logo{
+    width: 220px;
+    height: 140px;
+    background-color: rgba(0,0,0,.1);
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.logo img{
+    margin: 20px;
+}
+
+.login{
+    width: 330px;
+    height: 380px;
+    background-color: rgba(0,0,0,.4);
+    position: relative;
+    left: 800px;
+}
+
+
+input{
+    width: 245px;
+    height: 40px;
+    background-color: #eef3f8;
+    margin: 10px;
+}
+
+span{
+    margin: 10px;
+}
+
+.submit{
+    background-image: url("../img/login-btn.png");
+    width: 242px;
+    height: 38px;
+
+}
+
+.code{
+    width: 110px;
+}
+
+.code2{
+    width: 110px;
+    background-image: url("../img/yzm.jpg");
+}
+
+form{
+    color: #edeada;
+    font-size: large;
+    font-family: 微软雅黑, serif;
+    padding: 30px;
+}
+
