@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+
+.add{
+
+    background-color: rgba(0,0,0,0.4);
+}
+
+#add table{
+    width: 500px;
+
+
+}
+
+#add th,#add td{
+    height: 60px;
+    text-align: right;
+    border: none;
+}
+
+#add input{
+    width: 320px;
+    height: 40px;
+}
+
+#add{
+    width: 500px;
+    padding: 25px;
+}
+
+
+
+ /*form{*/
+    /*color: #edeada;*/
+    /*font-size: large;*/
+    /*font-family: 微软雅黑, serif;*/
+    /*padding: 30px;*/
+/*}*/
+
+#add .code{
+    width: 110px;
+}
+
+#add .code2{
+    width: 110px;
+    background-image: url("../img/yzm.jpg");
+}
+
+
+
+
+
+#add .submit{
+    background-image: url("../img/add-btn.png");
+    width: 100px;
+    height: 38px;
+
+}
+
+#add .cancel{
+    background-image: url("../img/add-cancel.png");
+    width: 100px;
+    height: 38px;
+
+}

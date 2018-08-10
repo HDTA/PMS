@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*---------------------reset----------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0;}
+ol, ul, li { list-style:none }
+body { background:#FFF;}
+:focus { outline:0 }
+table { border-collapse:collapse; border-spacing:0 }
+table,table td,table th{border:1px solid #edeada;border-collapse:collapse;}
+address, cite, code, dfn, em, var, i { font-style:normal }
+input[type=button], input[type=submit], button { cursor:pointer; outline:none;}
+
+a { text-decoration:none; color:#009bd8 }
+
+.hide{ display:none;}
+body, p, div, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, form, input, select, label, table, tr, td, th, thead, tbody, tfoot
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul, ol
+{
+    list-style: none;
+}
+
+body{
+    overflow: hidden;
+}
+
+.shadow{
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+.shadow2{
+    box-shadow: -2px -2px 2px rgba(0,0,0,.5);
+}
+
+
+.pointer:hover{
+    cursor: pointer;
+}
+
