@@ -5,49 +5,15 @@ $(function () {
 
 /* 监听器 */
 function listener() {
-    $('#admin').click(function () {
-        location.href = "/success/admin.do";
+
+
+    /*图片名称和请求名称对应关系*/
+    $('#table').click(function (evt) {
+        var e = evt || event;
+        var target = e.target.getAttribute("src");
+        var temp = target.split("/");
+        location.href = "/success/"+temp[temp.length-1].split(".")[0] + ".do";
     });
-
-    $('#owner').click(function () {
-        location.href = "/success/owner.do";
-    });
-
-    $('#emp').click(function () {
-        location.href = "/success/emp.do";
-    });
-
-    $('#member').click(function () {
-        location.href = "/success/member.do";
-    });
-
-    $('#permission').click(function () {
-        location.href = "/success/permission.do";
-
-    });
-
-    $('#house').click(function () {
-        location.href = "/success/house.do";
-
-    });
-
-    $('#tariff').click(function () {
-        location.href = "/success/tariff.do";
-
-    });
-
-    $('#material').click(function () {
-        location.href = "/success/material.do";
-
-    });
-
-    $('#fix').click(function () {
-        location.href = "/success/fix.do";
-
-    });
-
-
-
 
 
 }

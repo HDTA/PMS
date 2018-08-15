@@ -10,12 +10,12 @@
   <head>
     <meta charset="UTF-8">
     <title>物业管理系统</title>
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/login.css">
   </head>
   <body class="body">
     <div class="logo">
-      <img src="../../img/logo.png">
+      <img src="../../../img/logo.png">
     </div>
 
     <div class="login">

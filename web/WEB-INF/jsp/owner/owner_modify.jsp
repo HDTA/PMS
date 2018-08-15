@@ -24,11 +24,18 @@
             <tr>
                 <th>权限级别:</th>
                 <td>
-                    <input type="text" value="普通用户" class="input read" readonly >
+                    <input type="text" value="业主" class="input read" readonly >
                 </td>
                 <td></td>
             </tr>
 
+            <tr>
+                <th>业主ID:</th>
+                <td>
+                    <input type="text" value="1000" class="input read" readonly >
+                </td>
+                <td></td>
+            </tr>
             <tr>
                 <th>账户:</th>
                 <td>
@@ -43,9 +50,15 @@
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
-
             <tr>
-                <th>密码:</th>
+                <th>原密码:</th>
+                <td>
+                    <input type="password"   >
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
+            </tr>
+            <tr>
+                <th>新密码:</th>
                 <td>
                     <input type="password" placeholder="6~20长度">
                 </td>

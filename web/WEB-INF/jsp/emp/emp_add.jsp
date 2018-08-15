@@ -24,7 +24,7 @@
             <tr>
                 <th>权限级别:</th>
                 <td>
-                    <input type="text" value="普通用户" class="input read" readonly >
+                    <input type="text" value="员工" class="input read" readonly >
                 </td>
                 <td></td>
             </tr>

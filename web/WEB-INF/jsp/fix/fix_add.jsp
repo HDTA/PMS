@@ -10,6 +10,17 @@
 <html>
 <head>
     <jsp:include page="../public/headAdd.jsp"/>
+    <style>
+        #add .radio{
+            width: 20px;
+            height: 20px;
+            background-color: #a5c261;
+            color: #2b2b2b;
+
+        }
+
+
+    </style>
 
 </head>
 <body class="body">
@@ -24,50 +35,39 @@
             <tr>
                 <th>权限级别:</th>
                 <td>
-                    <input type="text" value="普通用户" class="input read" readonly >
+                    <input type="text" value="管理员" class="input read" readonly >
                 </td>
                 <td></td>
             </tr>
 
             <tr>
-                <th>账户:</th>
-                <td>
-                    <input type="text" placeholder="5~30长度的字母、数字、下划线" class="input">
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
-            </tr>
-            <tr>
-                <th>姓名:</th>
+                <th>维修人:</th>
                 <td>
                     <input type="text" placeholder="5~20长度的字母、数字、汉字">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
 
-            <tr>
-                <th>密码:</th>
-                <td>
-                    <input type="password" placeholder="6~20长度">
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
-            </tr>
 
             <tr>
-                <th>确认密码:</th>
+                <th>维修进度:</th>
                 <td>
-                    <input type="password" value="">
+                    <label><input type="radio" name="schedule" class="radio">&nbsp;&nbsp;待维修</label>&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="schedule" class="radio">&nbsp;&nbsp;维修中...</label>&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="schedule" class="radio">&nbsp;&nbsp;已完成</label>&nbsp;&nbsp;&nbsp;
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
             <tr>
-                <th>E-mail:</th>
+                <th>维修时间:</th>
                 <td>
                     <input type="text" value="">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
+
             <tr>
-                <th>TEL:</th>
+                <th>客户反馈:</th>
                 <td>
                     <input type="text" value="">
                 </td>

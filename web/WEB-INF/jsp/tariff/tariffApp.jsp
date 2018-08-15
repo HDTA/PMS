@@ -10,27 +10,27 @@
 <html>
 <head>
     <jsp:include page="../public/head.jsp"/>
-    <script src="../../../js/houseApp.js"></script>
+    <script src="../../../js/tariffApp.js"></script>
 
 </head>
 <body class="body">
 <jsp:include page="../public/logo.jsp"/>
+<script src="../../../js/tariffApp.js"></script>
 
 <div class="able">
-    <p><a href="/success/house.do">楼房详细信息 </a>| <a href="/success/houseApp.do">使用情况</a></p>
+    <p><a href="/success/tariff.do">资费详细信息 </a>| <a href="/success/tariffApp.do">缴费信息</a></p>
     <table id="info">
         <thead>
         <tr>
-            <th><label class="pointer"><input type="checkbox">房间ID</label></th>
-            <th>楼栋名</th>
-            <th>房间号</th>
-            <th>是否上架</th>
-            <th>入住时间</th>
-            <th>房屋类型</th>
-            <th>房屋用途</th>
-            <th>房屋面积</th>
-            <th>房屋朝向</th>
-            <th>备注</th>
+            <th><label class="pointer"><input type="checkbox">用户ID</label></th>
+            <th>使用人</th>
+            <th>收费项目</th>
+            <th>使用数量</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>应收金额</th>
+            <th>实收金额</th>
+            <th>欠费金额</th>
             <th>
                 <img src="../../../img/add.png" class="pointer" id="add">
                 <img src="../../../img/del.png" class="pointer" id="delAll">
@@ -40,16 +40,15 @@
         <tbody>
         <c:forEach begin="1" end="9" step="1">
             <tr>
-                <td><label class="pointer"><input type="checkbox">&nbsp;&nbsp;1</label></td>
-                <td>A栋</td>
-                <td>208</td>
-                <td>是</td>
-                <td>2014-5-8</td>
-                <td>1室1厅</td>
-                <td>居住</td>
-                <td>100平方米</td>
-                <td>东南向</td>
-                <td>--</td>
+                <td><label class="pointer"><input type="checkbox">&nbsp;&nbsp;10000</label></td>
+                <td>盐酸</td>
+                <td>水费</td>
+                <td>100</td>
+                <td>2017-9-25</td>
+                <td>2017-9-25</td>
+                <td>100</td>
+                <td>80</td>
+                <td>20</td>
                 <td>
                     <img src="../../../img/modify.png" class="pointer" >
                     <img src="../../../img/del.png" class="pointer">

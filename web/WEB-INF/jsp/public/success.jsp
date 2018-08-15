@@ -10,10 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <title>物业管理系统</title>
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../css/success.css">
-    <script src="../../js/jquery-1.8.3.js"></script>
-    <script src="../../js/success.js"></script>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/success.css">
+    <script src="../../../js/jquery-1.8.3.js"></script>
+    <script src="../../../js/success.js"></script>
     <style>
         table{
             width: 300px;
@@ -36,26 +36,26 @@
 </head>
 <body class="body">
 <div class="logo shadow" >
-    <img src="../../img/logo.png">
+    <img src="../../../img/logo.png">
 </div>
     <div class="able shadow">
         <table id="table" >
             <tr>
-                <td><img src="../../img/admin.png"/></td>
-                <td><img src="../../img/owner.png"/></td>
-                <td><img src="../../img/emp.png"/></td>
+                <td><img src="../../../img/admin.png"/></td>
+                <td><img src="../../../img/owner.png"/></td>
+                <td><img src="../../../img/emp.png"/></td>
             </tr>
 
             <tr>
-                <td><img src="../../img/member.png"/></td>
-                <td><img src="../../img/permission.png"/></td>
-                <td> <img src="../../img/house.png"/></td>
+                <td><img src="../../../img/member.png"/></td>
+                <td><img src="../../../img/permission.png"/></td>
+                <td> <img src="../../../img/house.png"/></td>
             </tr>
 
             <tr>
-                <td><img src="../../img/tariff.png"/></td>
-                <td><img src="../../img/material.png"/></td>
-                <td><img src="../../img/fix.png"/></td>
+                <td><img src="../../../img/tariff.png"/></td>
+                <td><img src="../../../img/material.png"/></td>
+                <td><img src="../../../img/fix.png"/></td>
             </tr>
         </table>
 

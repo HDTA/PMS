@@ -9,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <html>
 <head>
-    <jsp:include page="../public/headAdd.jsp"/>
+
 
 </head>
 <body class="body">
@@ -24,52 +24,83 @@
             <tr>
                 <th>权限级别:</th>
                 <td>
-                    <input type="text" value="普通用户" class="input read" readonly >
+                    <input type="text" value="管理员" class="input read" readonly >
                 </td>
                 <td></td>
             </tr>
 
+
             <tr>
-                <th>账户:</th>
+                <th>楼房名称:</th>
                 <td>
                     <input type="text" placeholder="5~30长度的字母、数字、下划线" class="input">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
             <tr>
-                <th>姓名:</th>
+                <th>楼层:</th>
                 <td>
-                    <input type="text" placeholder="5~20长度的字母、数字、汉字">
+                    <input type="text" placeholder="5~20长度的数字">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
 
             <tr>
-                <th>密码:</th>
+                <th>房间数:</th>
                 <td>
-                    <input type="password" placeholder="6~20长度">
+                    <input type="text" placeholder="5~20长度的数字">
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
+            </tr>
+
+
+
+            <tr>
+                <th>空房数:</th>
+                <td>
+                    <input type="text" placeholder="5~20长度的数字">
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
+            </tr>
+
+
+            <tr>
+                <th>是否电梯:</th>
+                <td>
+                    <input type="text" placeholder="2017-10-12">
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
+            </tr>
+            <tr>
+                <th>开工时间:</th>
+                <td>
+                    <input type="text" placeholder="2017-5-8">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
 
             <tr>
-                <th>确认密码:</th>
+                <th>竣工时间:</th>
                 <td>
-                    <input type="password" value="">
+                    <input type="text" placeholder="2017-5-8">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
+
+
             <tr>
-                <th>E-mail:</th>
+                <th>楼房面积:</th>
                 <td>
-                    <input type="text" value="">
+                    <input type="text" placeholder="5~20长度的数字">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
+
+
             <tr>
-                <th>TEL:</th>
+                <th>备注:</th>
                 <td>
-                    <input type="text" value="">
+                    <input type="text" placeholder="5~30长度的字母、数字、下划线" class="input">
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>

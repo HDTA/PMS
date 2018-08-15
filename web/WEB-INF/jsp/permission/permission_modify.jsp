@@ -9,86 +9,379 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>物业管理系统</title>
-    <link rel="stylesheet" href="../../../css/global.css">
-    <%--<link rel="stylesheet" href="../../css/login.css">--%>
-    <link rel="stylesheet" href="../../../css/admin.css">
-    <link rel="stylesheet" href="../../../css/add.css">
-    <script src="../../../js/jquery-1.8.3.js"></script>
+    <jsp:include page="../public/head.jsp"/>
+
+    <style>
+
+        #add #per td{
+            text-align: center;
+            /*line-height: 20px;*/
+            vertical-align: middle;
+            border:1px solid rgba(100,100,100,0.1);
+        }
+
+        #add #per th{
+            text-align: right;
+            /*line-height: 20px;*/
+            vertical-align: middle;
+            border:1px solid rgba(100,100,100,0.1);
+        }
+
+
+
+        #add #per #td,#add #per #td2{
+            text-align: center;
+        }
+        #add #per input{
+            width: 15px;
+            height: 15px;
+
+        }
+
+
+        #add #per .read{
+            background-color: rgba(255,255,255,0.1);
+            text-align: center;
+            color: #a5c261;
+            width: 350px;
+            height: 40px;
+            font-size: large;
+        }
+
+
+
+
+        #add #but .submit{
+            background-image: url("../../../img/add-btn.png");
+            width: 100px;
+            height: 38px;
+
+        }
+
+        #add #but .cancel{
+            background-image: url("../../../img/add-cancel.png");
+            width: 100px;
+            height: 38px;
+
+        }
+
+        #add #per .code{
+            width: 130px;
+            height: 38px;
+        }
+
+        #add {
+            height: 900px;
+        }
+
+    </style>
+
 
 </head>
-<body class="body">
+<body class="body" id="body">
 <jsp:include page="../public/logo.jsp"/>
 
-<div class="able add" id="add">
+<div class="able " id="add"   >
 
     <form action="" method="post">
 
+        <table id="per">
+            <tr>
+                <th>
+                    <span>权限级别:</span>
+                </th>
+                <td colspan="4" id="td">
+                    <input type="text" value="管理员" class=" read" readonly >
 
-        <table >
-            <tr>
-                <th>ID:</th>
-                <td>
-                    <input type="text" placeholder="30长度以内的字母、数字、下划线组合" class="input" readonly>
                 </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
+
+
             <tr>
-                <th>姓名:</th>
-                <td>
-                    <input type="text" placeholder="20长度以内的字母、数字、汉字组合">
+                <th>
+                    <span>管理员ID:</span>
+                </th>
+                <td colspan="4" id="td2">
+                    <input type="text" value="1000" class=" read" readonly >
+
                 </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
-            </tr>
-            <tr>
-                <th>密码:</th>
-                <td>
-                    <input type="text"  placeholder="6~20长度以内的字母、数字、下划线组合" >
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
-            </tr>
-            <tr>
-                <th>确认密码:</th>
-                <td>
-                    <input type="text" value="">
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
-            </tr>
-            <tr>
-                <th>E-mail:</th>
-                <td>
-                    <input type="text" value="">
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
-            </tr>
-            <tr>
-                <th>TEL:</th>
-                <td>
-                    <input type="text" value="">
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/no.png"></td>
             </tr>
 
             <tr>
-                <th>验证码:</th>
-                <td>
-                    <input type="text" placeholder="输入验证码" class="code">
-                    <input class="code2" ><br>
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;<img src="../../../img/ok.png"></td>
+                <th>
+                    <span>管理员模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>业主模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <th>
+                    <span>员工模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>用户模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>权限模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>楼房模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>资费模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>物资模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <span>维修模块:</span>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <label><input type="checkbox"/> <span>A-添加</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>D-删除</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>M-修改</span></label>
+                </td>
+                <td>
+                    <label><input type="checkbox"/> <span>S-查看</span></label>
+                </td>
+            </tr>
+
+            <%--<tr>--%>
+            <%--<th >--%>
+            <%--<span>验证码:</span>--%>
+            <%--</th>--%>
+
+            <%--<td >--%>
+            <%--<input type="text" placeholder="输入验证码" class="code">--%>
+            <%--</td>--%>
+            <%--<td><img src="../../../img/BHU9.jpg" class="vci"></td>--%>
+            <%--<td><img src="../../../img/ok.png"></td>--%>
+            <%--<td></td>--%>
+
+
+            <%--</tr>--%>
 
 
         </table>
-        <input type="submit" class="submit" value="">
-        <input type="button" class="cancel">
+
+        <br>
     </form>
-
-
+    <div id="but">
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" class="submit" value="">
+        &nbsp;
+        <input type="button" class="cancel">
+        <br><br>
+    </div>
 </div>
 
-<br><br>
+<br><br><br>
 
 </body>
 </html>

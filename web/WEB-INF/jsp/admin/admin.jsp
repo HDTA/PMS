@@ -9,34 +9,26 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>物业管理系统</title>
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../css/admin.css">
-    <script src="../../js/jquery-1.8.3.js"></script>
-    <script src="../../js/admin.js"></script>
+    <jsp:include page="../public/head.jsp"/>
+    <script src="../../../js/admin.js"></script>
 
 </head>
 <body class="body">
-<div class="logo " >
-    <img src="../../img/logo3.png">
-    <button class="shadow" id="first">首页</button>
-    <button class="shadow" id="logout">退出</button>
-</div>
+<jsp:include page="../public/logo.jsp"/>
 
     <div class="able">
         <p>管理员信息一览表</p>
         <table id="info">
             <thead>
                 <tr>
-                    <th><label class="pointer"><input type="checkbox">&nbsp;&nbsp;ID</label></th>
+                    <th><label class="pointer"><input type="checkbox">管理员ID</label></th>
                     <th>姓名</th>
                     <th>电话</th>
                     <th>E-mail</th>
                     <th>权限</th>
                     <th>
-                        <img src="../../img/add.png" class="pointer" id="add">
-                        <img src="../../img/del.png" class="pointer" id="delAll">
+                        <img src="../../../img/add.png" class="pointer" id="add">
+                        <img src="../../../img/del.png" class="pointer" id="delAll">
                     </th>
                 </tr>
             </thead>
@@ -49,8 +41,8 @@
                         <td>12345678999@qq.com</td>
                         <td>admin</td>
                         <td>
-                            <img src="../../img/modify.png" class="pointer" >
-                            <img src="../../img/del.png" class="pointer">
+                            <img src="../../../img/modify.png" class="pointer" >
+                            <img src="../../../img/del.png" class="pointer">
                         </td>
                     </tr>
             </c:forEach>
@@ -72,7 +64,7 @@
 
         <!-- 搜索-->
         <p class="search">
-            <img src="../../img/search.png"/>
+            <img src="../../../img/search.png"/>
             <input type="text" placeholder="输入ID或者名字">
         </p>
 

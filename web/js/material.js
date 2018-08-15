@@ -9,7 +9,7 @@ function listener() {
 
     /*添加管理员*/
     $('#add').click(function () {
-        location.href = "/admin/add.do";
+        location.href = "/material/add.do";
     });
 
     /*删除当前页的所有管理员*/
@@ -23,7 +23,7 @@ function listener() {
         var target = e.target.getAttribute("src");
         console.log(target);
         if(target === "../../../img/modify.png"){
-            location.href = "/admin/modify.do";
+            location.href = "/material/modify.do";
         }
 
    });

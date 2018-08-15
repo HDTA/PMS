@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.logo{
+
+    /*background-color: rgba(0,0,0,0.1);*/
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: auto;
+    height: 140px;
+
+}
+
+.logo img{
+    margin: 20px;
+}
+
+.logo button{
+    width: 80px;
+    height: 50px;
+    position: relative;
+    left: 700px;
+    top: -50px;
+    margin: 10px;
+    background-color: rgba(0,255,255,.7);
+    outline: none;
+    border: 0;
+
+}
+

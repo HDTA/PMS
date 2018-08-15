@@ -3,7 +3,9 @@
 
 .add{
 
-    background-color: rgba(0,0,0,0.4);
+    background-color: transparent;
+    position: relative;
+    left: 0;
 }
 
 #add table{
@@ -19,8 +21,17 @@
 }
 
 #add input{
-    width: 320px;
+    width: 350px;
     height: 40px;
+    font-size: large;
+    font-family: "Adobe 楷体 Std R",sans-serif;
+    padding-left: 15px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,1);
+}
+
+#add input:focus{
+    background-color:  #a5c261;
 }
 
 #add{
@@ -29,21 +40,16 @@
 }
 
 
-
- /*form{*/
-    /*color: #edeada;*/
-    /*font-size: large;*/
-    /*font-family: 微软雅黑, serif;*/
-    /*padding: 30px;*/
-/*}*/
-
 #add .code{
-    width: 110px;
+    width: 160px;
 }
 
-#add .code2{
-    width: 110px;
-    background-image: url("../img/yzm.jpg");
+
+
+#add .vci{
+    position: relative;
+    top:12px;
+
 }
 
 
@@ -63,3 +69,12 @@
     height: 38px;
 
 }
+
+#add .read,#add .read:focus{
+    background-color: rgba(255,255,255,0.1);
+    text-align: center;
+    color: #a5c261;
+
+}
+
+
