@@ -10,12 +10,12 @@ public class loginController {
 
     @RequestMapping(value = "/login.do",method = RequestMethod.POST)
     public String login(){
-        return "success";
+        return "public/success";
     }
 
     @RequestMapping(value = "/index.do",method = RequestMethod.GET)
     public String index(){
-        return "index";
+        return "public/login";
     }
 
 
