@@ -1,15 +1,30 @@
 package controller;
 
+import dao.UserDao;
+import entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.annotation.Resource;
+import javax.annotation.Resources;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "/success")
 public class successController {
 
+    @Resource(name = "dao")
+    private UserDao dao;
+
     @RequestMapping(value = "/admin.do",method = RequestMethod.GET)
-    public String admin(){
+    public String admin(HttpServletRequest request){
+        List<User> list = dao.findAll();
+        request.setAttribute("list",list);
         return "admin/admin";
     }
 
