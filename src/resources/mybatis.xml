@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+
+">
+
+    <util:properties id="db" location="classpath:resources/db.properties"/>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="#{db.driver}"/>
+        <property name="url" value="#{db.url}"/>
+        <property name="username" value="#{db.username}"/>
+        <property name="password" value="#{db.password}"/>
+        <property name="initialSize" value="#{db.initialSize}"/>
+        <property name="maxActive" value="#{db.maxSize}"/>
+        <property name="maxWait" value="#{db.maxWait}"/>
+        <property name="maxIdle" value="#{db.maxIdle}"/>
+        <property name="minIdle" value="#{db.minIdle}"/>
+
+    </bean>
+
+
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:/mappers/*.xml"/>
+        <property name="configLocation" value="classpath:resources/mybatis-config.xml"/>
+    </bean>
+
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="dao"/>
+        <!--<property name="annotationClass" value="shiro.serviceDao.scan"/>-->
+    </bean>
+
+    <!--&lt;!&ndash; 配置事务管理器&ndash;&gt;-->
+    <!--<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+
+    <!--&lt;!&ndash; 配置注解驱动&ndash;&gt;-->
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+    <!--<tx:advice id="transactionInterceptor" transaction-manager="transactionManager">-->
+        <!--<tx:attributes>-->
+            <!--<tx:method name="T*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception" timeout="-1" read-only="true"/>-->
+        <!--</tx:attributes>-->
+    <!--</tx:advice>-->
+
+
+    <!--&lt;!&ndash; aop自动代理&ndash;&gt;-->
+    <!--<aop:aspectj-autoproxy  proxy-target-class="true"/>-->
+
+    <!--<aop:config>-->
+        <!--<aop:pointcut id="all" expression="execution(* shiro.realms.*.T*(..))"/>-->
+        <!--<aop:advisor advice-ref="transactionInterceptor" pointcut-ref="all"/>-->
+    <!--</aop:config>-->
+
+</beans>
+
+
+
+
+
+
+
+
