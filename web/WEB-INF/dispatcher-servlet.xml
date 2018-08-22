@@ -13,6 +13,7 @@
 
     <context:annotation-config/>
     <context:component-scan base-package="controller" />
+    <context:component-scan base-package="dao" />
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
 

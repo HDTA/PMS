@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2018/8/9
@@ -6,11 +7,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="../public/head.jsp"/>
     <script src="../../../js/admin.js"></script>
+
 
 </head>
 <body class="body">
@@ -33,18 +35,20 @@
                 </tr>
             </thead>
             <tbody>
-            <c:forEach begin="1" end="9" step="1">
+            <c:forEach items="${requestScope.list}" var="i" >
+
                     <tr>
-                        <td><label class="pointer"><input type="checkbox">&nbsp;&nbsp;10000</label></td>
-                        <td>一氧化二氚</td>
-                        <td>+86-0123-12345678999</td>
-                        <td>12345678999@qq.com</td>
-                        <td>admin</td>
+                        <td><label class="pointer"><input type="checkbox">&nbsp;&nbsp;${i.id}</label></td>
+                        <td>${i.username}</td>
+                        <td>${i.tel}</td>
+                        <td>${i.email}</td>
+                        <td>${i.role}</td>
                         <td>
                             <img src="../../../img/modify.png" class="pointer" >
                             <img src="../../../img/del.png" class="pointer">
                         </td>
                     </tr>
+
             </c:forEach>
             </tbody>
         </table>
